@@ -1,0 +1,13 @@
+# version of docker compose
+version: '3'
+
+# instructions
+# instructions = container or a container type. we are defining 2 services
+
+services: #containers we are going to spin up
+  redis-server: #name of image
+    image: 'redis' #which image will u use to make it?
+  node-app:
+    build: .
+    ports: 
+    - "4001:8081" #port declaration only for our use on local machine, not necessary
