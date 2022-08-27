@@ -8,6 +8,7 @@ services: #containers we are going to spin up
   redis-server: #name of image
     image: 'redis' #which image will u use to make it?
   node-app:
+    restart: on-failure
     build: .
     ports: 
     - "4001:8081" #port declaration only for our use on local machine, not necessary
